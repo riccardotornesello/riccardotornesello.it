@@ -12,11 +12,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Riccardo
-          <br />
-          Tornesello
-        </h1>
+        <div className={styles.titleContainer}>
+          <span>{"<"}</span>
+          <h1 className={styles.title}>
+            Riccardo
+            <br />
+            Tornesello
+          </h1>
+          <span className={styles.bottom}>{"/>"}</span>
+        </div>
         <h2 className={styles.subTitle}>Landing page under construction</h2>
         <a className={styles.linkedin}>
           <BsLinkedin />
