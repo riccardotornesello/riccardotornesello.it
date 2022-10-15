@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { BsLinkedin } from "react-icons/bs";
+import { BsEnvelopeFill, BsGithub, BsLinkedin } from "react-icons/bs";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -21,11 +21,32 @@ const Home: NextPage = () => {
           </h1>
           <span className={styles.bottom}>{"/>"}</span>
         </div>
-        <h2 className={styles.subTitle}>Landing page under construction</h2>
-        <a className={styles.linkedin}>
-          <BsLinkedin />
-          Linkedin
-        </a>
+        <h2 className={styles.subTitle}>
+          <span className={styles.underline}>Website under construction</span>
+        </h2>
+        <div className={styles.socialContainer}>
+          <a
+            className={styles.socialButton}
+            style={{ backgroundColor: "#0077b5" }}
+          >
+            <BsLinkedin />
+            Linkedin
+          </a>
+          <a
+            className={styles.socialButton}
+            style={{ backgroundColor: "#171515" }}
+          >
+            <BsGithub />
+            GitHub
+          </a>
+          <a
+            className={styles.socialButton}
+            style={{ backgroundColor: "#219ebc" }}
+          >
+            <BsEnvelopeFill />
+            Email
+          </a>
+        </div>
       </main>
     </div>
   );
