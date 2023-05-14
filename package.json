@@ -1,0 +1,46 @@
+{
+  "name": "riccardotornesello-gatsby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "riccardotornesello-gatsby",
+  "author": "riccardotornesello",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "^6.0.8",
+    "@mantine/hooks": "^6.0.8",
+    "@tabler/icons-react": "^2.17.0",
+    "aos": "^2.3.4",
+    "gatsby": "^5.9.0",
+    "gatsby-plugin-google-gtag": "^5.9.0",
+    "gatsby-plugin-image": "^3.9.0",
+    "gatsby-plugin-layout": "^4.9.0",
+    "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-mantine": "^5.0.0",
+    "gatsby-plugin-pnpm": "^1.2.10",
+    "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-plugin-sitemap": "^6.9.0",
+    "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-sharp": "^5.9.0",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.4"
+  }
+}
