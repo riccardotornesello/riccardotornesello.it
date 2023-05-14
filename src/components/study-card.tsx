@@ -1,7 +1,6 @@
 import * as React from 'react';
 import moment from 'moment';
-import { Card, Group, Text, ThemeIcon, Image } from '@mantine/core';
-import { Status } from '../data/common';
+import { Group, Text, Image, createStyles } from '@mantine/core';
 import type { StudyDetails } from '../data/studies';
 import CustomCard from './custom-card';
 
@@ -9,7 +8,17 @@ export type StudyCardOptions = {
   studyDetails: StudyDetails;
 };
 
+const useStyles = createStyles((theme) => ({
+  icon: {
+    backgroundColor: 'white',
+    borderRadius: '100%',
+    padding: '3px',
+  },
+}));
+
 export function StudyCard({ studyDetails }: StudyCardOptions): JSX.Element {
+  const { classes } = useStyles();
+
   return (
     <CustomCard
       status={studyDetails.status}
@@ -21,13 +30,11 @@ export function StudyCard({ studyDetails }: StudyCardOptions): JSX.Element {
         </Text>
       }
       body={
-        <Group mt='sm'>
-          <Image maw={50} src={studyDetails.icon} />
-          <Text color='dimmed' size='sm'>
-            {studyDetails.description}
-          </Text>
-        </Group>
+        <Text color='dimmed' size='sm'>
+          {studyDetails.description}
+        </Text>
       }
+      icon={studyDetails.icon}
     />
   );
 }

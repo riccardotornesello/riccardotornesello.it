@@ -40,15 +40,15 @@ export function ExperienceCard({
         </Text>
       }
       body={
-        <>
-          <Text mt='sm' color='dimmed' size='sm'>
+        <div>
+          <Text color='dimmed' size='sm'>
             {experience.description}
           </Text>
 
           <ExperienceTechnologiesList
             experienceTechnologies={experience.technologies}
           />
-        </>
+        </div>
       }
     />
   );

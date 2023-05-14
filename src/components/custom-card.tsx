@@ -1,6 +1,14 @@
 import { useState, useEffect } from 'react';
 
-import { Card, Badge, Flex, ThemeIcon, Group } from '@mantine/core';
+import {
+  Card,
+  Badge,
+  Flex,
+  ThemeIcon,
+  Group,
+  Image,
+  createStyles,
+} from '@mantine/core';
 import { Status } from '../data/common';
 import { IconPointFilled } from '@tabler/icons-react';
 import { useInterval } from '@mantine/hooks';
@@ -9,6 +17,7 @@ export type CustomCardProps = {
   header: JSX.Element;
   body: JSX.Element;
   status?: Status;
+  icon?: string;
 };
 
 type StatusStyle = {
@@ -28,7 +37,7 @@ type DotIconProps = {
 const statusStyle: Record<Status, StatusStyle> = {
   [Status.IN_PROGRESS]: {
     color: 'blue',
-    text: 'In progress',
+    text: 'Ongoing',
     animated: true,
   },
   [Status.FINISHED]: {
@@ -37,11 +46,22 @@ const statusStyle: Record<Status, StatusStyle> = {
   },
 };
 
+const useStyles = createStyles((theme) => ({
+  icon: {
+    backgroundColor: 'white',
+    borderRadius: '100%',
+    padding: '3px',
+  },
+}));
+
 export function CustomCard({
   header,
   body,
   status,
+  icon,
 }: CustomCardProps): JSX.Element {
+  const { classes } = useStyles();
+
   return (
     <Card withBorder shadow='sm' radius='md'>
       <Card.Section withBorder inheritPadding py='xs'>
@@ -51,7 +71,10 @@ export function CustomCard({
         </Group>
       </Card.Section>
 
-      {body}
+      <Group mt='sm'>
+        {icon && <Image maw={70} src={icon} className={classes.icon} />}
+        {body}
+      </Group>
     </Card>
   );
 }
@@ -83,7 +106,9 @@ function DotIcon({ animated = false }: DotIconProps): JSX.Element {
   return (
     <Flex justify='center' align='center'>
       <ThemeIcon size='xs' color='#ffffff' radius='xl' variant='transparent'>
-        <IconPointFilled style={{ opacity: filled ? 1 : 0, transition: 'all 0.5s ease' }} />
+        <IconPointFilled
+          style={{ opacity: filled ? 1 : 0, transition: 'all 0.5s ease' }}
+        />
       </ThemeIcon>
     </Flex>
   );
