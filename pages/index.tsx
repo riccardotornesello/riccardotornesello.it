@@ -1,9 +1,12 @@
 import type { NextPage } from "next";
+import { useState } from "react";
 import Head from "next/head";
 import { BsEnvelopeFill, BsGithub, BsLinkedin } from "react-icons/bs";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
+  const [showEmail, setShowEmail] = useState(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -41,10 +44,13 @@ const Home: NextPage = () => {
           </a>
           <a
             className={styles.socialButton}
-            style={{ backgroundColor: "#219ebc" }}
+            style={{ backgroundColor: "#219ebc", width: showEmail ? 500 : 0 }}
+            onClick={() => {
+              setShowEmail(true)
+            }}
           >
             <BsEnvelopeFill />
-            Email
+            {showEmail ? "riccardo.tornesello@gmail.com" : "Email"}
           </a>
         </div>
       </main>

@@ -60,11 +60,14 @@
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  width: 180px;
+  min-width: 180px;
   margin-left: 10px;
+  overflow: hidden;
+  transition: all 0.5s;
 }
 
 .socialButton svg {
+  flex-shrink: 0;
   margin-right: 10px;
 }
 
