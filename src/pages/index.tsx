@@ -1,11 +1,13 @@
-import * as React from 'react';
-import type { HeadFC, PageProps } from 'gatsby';
+import type { NextPage } from 'next';
+
 import { Hero } from '../components/hero';
 import { ExperiencesList } from '../components/experiences-list';
 import { StudiesList } from '../components/studies-list';
 import { SkillsList } from '../components/skills-list';
 
-const IndexPage: React.FC<PageProps> = () => {
+// import Counter from '../features/counter/Counter';
+
+const IndexPage: NextPage = () => {
   return (
     <main>
       <Hero />
@@ -19,5 +21,3 @@ const IndexPage: React.FC<PageProps> = () => {
 };
 
 export default IndexPage;
-
-export const Head: HeadFC = () => <title>Riccardo Tornesello</title>;

@@ -22,7 +22,7 @@ export const studies: StudyDetails[] = [
     description: 'I did some stuff',
     school: 'University',
     location: 'Location',
-    icon: logoUnisalento,
+    icon: logoUnisalento.src,
   },
   {
     title: 'High School Diploma',
@@ -32,6 +32,6 @@ export const studies: StudyDetails[] = [
     description: 'I did some stuff',
     school: 'High School',
     location: 'Location',
-    icon: logoPolito,
+    icon: logoPolito.src,
   },
 ];

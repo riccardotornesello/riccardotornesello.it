@@ -10,7 +10,7 @@ import {
   Group,
 } from '@mantine/core';
 import { UserCard } from './user-card';
-import server from '../images/server.jpg';
+import server from '../images/generic/server.jpg';
 import profile from '../images/profile.jpeg';
 import { IconChevronsDown } from '@tabler/icons-react';
 import { StatusCard } from './status-card';
@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: '#11284b',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundImage: `linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(${server})`,
+    backgroundImage: `linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(${server.src})`,
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
   },
