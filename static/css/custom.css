@@ -1,0 +1,30 @@
+/* You can customize theme styles here */
+
+.header .navbar-brand span:first-child {
+  color: #d62828;
+}
+
+.experience__company {
+  color: #d62828;
+}
+
+.testimonial__author-info span {
+  color: #d62828;
+}
+
+.card-link {
+  color: #d62828;
+  font-weight: bold;
+}
+
+html body ::-moz-selection {
+  background-color: #d62828;
+}
+
+html body ::selection {
+  background-color: #d62828;
+}
+
+.progress-bar {
+  background-color: #f77f00;
+}

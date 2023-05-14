@@ -1,0 +1,28 @@
+{{ if .Site.Data.homepage.projects.enable }}
+<section
+  id="projects"
+  class="section section--border-bottom rad-animation-group"
+>
+  <div class="container">
+    <div class="row flex-md-row rad-fade-down">
+      <div class="col-12">
+        <h2>{{ .Site.Data.homepage.projects.title }}</h2>
+        <p class="lead">{{ .Site.Data.homepage.projects.description }}</p>
+        <div class="row text-center justify-content-md-center">
+          {{ range .Site.Data.homepage.projects.items }}
+          <div class="col-12 col-sm-6 col-md-4 mt-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">{{ .name }}</h5>
+                <p class="card-text">{{ .description }}</p>
+                <a href="https://{{ .url }}" target="_blank" class="card-link">{{ .url }}</a>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
