@@ -1,7 +1,9 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+
 import { Card, Badge, Flex, ThemeIcon, Group } from '@mantine/core';
 import { Status } from '../data/common';
-import { IconPoint } from '@tabler/icons-react';
+import { IconPointFilled } from '@tabler/icons-react';
+import { useInterval } from '@mantine/hooks';
 
 export type CustomCardProps = {
   header: JSX.Element;
@@ -12,16 +14,22 @@ export type CustomCardProps = {
 type StatusStyle = {
   color: string;
   text: string;
+  animated?: boolean;
 };
 
 type StatusChipProps = {
   status: Status;
 };
 
+type DotIconProps = {
+  animated?: boolean;
+};
+
 const statusStyle: Record<Status, StatusStyle> = {
   [Status.IN_PROGRESS]: {
-    color: 'orange',
+    color: 'blue',
     text: 'In progress',
+    animated: true,
   },
   [Status.FINISHED]: {
     color: 'green',
@@ -54,18 +62,28 @@ function StatusChip({ status }: StatusChipProps): JSX.Element {
       color={statusStyle[status].color}
       variant='filled'
       pl={3}
-      leftSection={<DotIcon />}
+      leftSection={<DotIcon animated={statusStyle[status].animated} />}
     >
       {statusStyle[status].text}
     </Badge>
   );
 }
 
-function DotIcon(): JSX.Element {
+function DotIcon({ animated = false }: DotIconProps): JSX.Element {
+  const [filled, setFilled] = useState(true);
+  const interval = useInterval(() => setFilled((s) => !s), 1000);
+
+  useEffect(() => {
+    if (animated) {
+      interval.start();
+      return interval.stop;
+    }
+  }, []);
+
   return (
     <Flex justify='center' align='center'>
       <ThemeIcon size='xs' color='#ffffff' radius='xl' variant='transparent'>
-        <IconPoint />
+        <IconPointFilled style={{ opacity: filled ? 1 : 0, transition: 'all 0.5s ease' }} />
       </ThemeIcon>
     </Flex>
   );
