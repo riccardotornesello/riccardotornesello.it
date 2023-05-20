@@ -12,7 +12,13 @@ export type SectionProps = {
 export function Section({ children, title, icon }: SectionProps): JSX.Element {
   return (
     <MediaQuery styles={{ marginBlock: '60px' }} largerThan='xs'>
-      <Container size='lg' style={{ position: 'relative', marginBlock: '20px' }}>
+      <Container
+        size='lg'
+        style={{
+          position: 'relative',
+          marginBlock: '20px',
+        }}
+      >
         <MediaQuery styles={{ display: 'none' }} smallerThan='xs'>
           <div>
             <SectionCorners />

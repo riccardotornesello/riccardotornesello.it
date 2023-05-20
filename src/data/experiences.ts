@@ -4,57 +4,23 @@ import { Status } from './common';
 export type Experience = {
   title: string;
   status: Status;
-  fromDate?: string;
-  toDate?: string;
+  dateInfo?: string;
   description?: string;
-  company?: string;
-  location?: string;
+  // TODO: company?: string;
+  // TODO: location?: string;
   technologies?: TechnologyName[];
 };
 
 export const experiences: Experience[] = [
   {
-    title: 'Software Engineer',
+    title: 'Backend developer and DevOps Engineer',
     status: Status.IN_PROGRESS,
-    fromDate: '2019-01-01',
-    toDate: '2020-01-01',
-    description: 'I did some stuff',
-    company: 'Company',
-    location: 'Location',
+    dateInfo: 'From 2019 to present',
+    description: '🚧 Work in progress...',
+    // company: 'Company',
+    // location: 'Location',
     technologies: [
-      TechnologyName.REACT,
-      TechnologyName.TYPESCRIPT,
-      TechnologyName.KUBERNETES,
+      TechnologyName.PYTHON,
     ],
-  },
-  {
-    title: 'Software Engineer',
-    status: Status.FINISHED,
-    fromDate: '2019-01-01',
-    toDate: '2020-01-01',
-    description: 'I did some stuff',
-    company: 'Company',
-    location: 'Location',
-    technologies: [TechnologyName.PYTHON, TechnologyName.DOCKER],
-  },
-  {
-    title: 'Software Engineer',
-    status: Status.FINISHED,
-    fromDate: '2019-01-01',
-    toDate: '2020-01-01',
-    description: 'I did some stuff',
-    company: 'Company',
-    location: 'Location',
-    technologies: [TechnologyName.PYTHON, TechnologyName.DOCKER],
-  },
-  {
-    title: 'Software Engineer',
-    status: Status.FINISHED,
-    fromDate: '2019-01-01',
-    toDate: '2020-01-01',
-    description: 'I did some stuff',
-    company: 'Company',
-    location: 'Location',
-    technologies: [TechnologyName.PYTHON, TechnologyName.DOCKER],
   },
 ];

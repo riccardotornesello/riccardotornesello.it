@@ -35,14 +35,21 @@ export function ExperienceCard({
       header={
         <Text weight={500} size='lg'>
           {experience.title}
-          <StartDateInfo startDate={experience.fromDate} />
-          <EndDateInfo endDate={experience.toDate} />
+          {experience.dateInfo && (
+            <Text span weight={400} size='sm'>
+              {' '}
+              - {experience.dateInfo}
+            </Text>
+          )}
         </Text>
       }
       body={
         <div>
           <Text color='dimmed' size='sm'>
-            {experience.description}
+            {experience.description &&
+              experience.description
+                .split('\n')
+                .map((line, index) => <div key={index}>{line}</div>)}
           </Text>
 
           <ExperienceTechnologiesList
@@ -51,46 +58,6 @@ export function ExperienceCard({
         </div>
       }
     />
-  );
-}
-
-export type StartDateInfoProps = {
-  startDate?: string;
-};
-
-export function StartDateInfo({
-  startDate,
-}: StartDateInfoProps): JSX.Element | null {
-  if (!startDate) {
-    return null;
-  }
-
-  const formattedDate = moment(startDate).format('MMM YYYY');
-
-  return (
-    <Text span weight={400} size='sm'>
-      {' '}
-      - From {formattedDate}
-    </Text>
-  );
-}
-
-export type EndDateInfoProps = {
-  endDate?: string;
-};
-
-export function EndDateInfo({ endDate }: EndDateInfoProps): JSX.Element | null {
-  if (!endDate) {
-    return null;
-  }
-
-  const formattedDate = moment(endDate).format('MMM YYYY');
-
-  return (
-    <Text span weight={400} size='sm'>
-      {' '}
-      - To {formattedDate}
-    </Text>
   );
 }
 

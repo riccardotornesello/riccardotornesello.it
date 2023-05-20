@@ -17,6 +17,7 @@ export enum TechnologyName {
   DOCKER = 'DOCKER',
   KUBERNETES = 'KUBERNETES',
   ANSIBLE = 'ANSIBLE',
+  NOT_FINISHED = 'NOT_FINISHED',
 }
 
 export const technologies: Record<TechnologyName, Technology> = {
@@ -79,5 +80,10 @@ export const technologies: Record<TechnologyName, Technology> = {
     name: 'Ansible',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg',
     color: '#000000',
+  },
+  [TechnologyName.NOT_FINISHED]: {
+    name: 'Publish an unfinished portfolio',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    color: '#61dafb',
   },
 };

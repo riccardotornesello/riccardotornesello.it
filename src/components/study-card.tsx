@@ -25,46 +25,23 @@ export function StudyCard({ studyDetails }: StudyCardOptions): JSX.Element {
       header={
         <Text weight={500} size='lg'>
           {studyDetails.title}
-          {StartDateInfo(studyDetails.fromDate)}
-          {EndDateInfo(studyDetails.toDate)}
+          {studyDetails.dateInfo && (
+            <Text span weight={400} size='sm'>
+              {' '}
+              - {studyDetails.dateInfo}
+            </Text>
+          )}
         </Text>
       }
       body={
         <Text color='dimmed' size='sm'>
-          {studyDetails.description}
+          {studyDetails.description &&
+            studyDetails.description
+              .split('\n')
+              .map((line, index) => <div key={index}>{line}</div>)}
         </Text>
       }
       icon={studyDetails.icon}
     />
-  );
-}
-
-export function StartDateInfo(startDate?: string): JSX.Element | null {
-  if (!startDate) {
-    return null;
-  }
-
-  const formattedDate = moment(startDate).format('MMM YYYY');
-
-  return (
-    <Text span weight={400} size='sm'>
-      {' '}
-      - From {formattedDate}
-    </Text>
-  );
-}
-
-export function EndDateInfo(endDate?: string): JSX.Element | null {
-  if (!endDate) {
-    return null;
-  }
-
-  const formattedDate = moment(endDate).format('MMM YYYY');
-
-  return (
-    <Text span weight={400} size='sm'>
-      {' '}
-      - To {formattedDate}
-    </Text>
   );
 }

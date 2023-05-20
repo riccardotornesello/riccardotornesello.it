@@ -64,7 +64,7 @@ const useStyles = createStyles((theme) => ({
   description: {
     color: theme.white,
     opacity: 0.75,
-    maxWidth: rem(500),
+    maxWidth: rem(800),
 
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
@@ -133,8 +133,18 @@ export function Hero(): JSX.Element {
             </Title>
 
             <Text className={classes.description} mt={30}>
-              A young but professional it enthusiast from Italy.<br/>
+              A young but professional it enthusiast from Italy.
+              <br />
               I'm currently a full-stack web developer and DevOps engineer.
+            </Text>
+
+            <Text className={classes.description} mt={30}>
+              <b>
+                ⚠️This portfolio is still under construction; data and styling
+                will slowly be updated. ⚠️
+              </b>
+              <br />
+              Why did I publish it? To be able to play with deployment.
             </Text>
 
             <div className={classes.socialsMobile}>

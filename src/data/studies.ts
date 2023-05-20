@@ -5,33 +5,30 @@ import logoPolito from '../images/university/polito.png';
 export type StudyDetails = {
   title: string;
   status: Status;
-  fromDate?: string;
-  toDate?: string;
+  dateInfo?: string;
   description?: string;
-  school?: string;
-  location?: string;
+  // TODO: school?: string;
+  // TODO: location?: string;
   icon?: string;
 };
 
 export const studies: StudyDetails[] = [
   {
-    title: 'Bachelor of Science in Computer Science',
+    title: "Master's degree program in computer engineering",
     status: Status.IN_PROGRESS,
-    fromDate: '2015-01-01',
-    toDate: '2019-01-01',
-    description: 'I did some stuff',
-    school: 'University',
-    location: 'Location',
+    dateInfo: 'From 2021 to present',
+    description: 'Turin Polytechnic\n🚧 Work in progress...',
+    // school: 'Turin Polytechnic',
+    // location: 'Location',
     icon: logoUnisalento.src,
   },
   {
-    title: 'High School Diploma',
+    title: "Bachelor's degree in information engineering",
     status: Status.FINISHED,
-    fromDate: '2011-01-01',
-    toDate: '2015-01-01',
-    description: 'I did some stuff',
-    school: 'High School',
-    location: 'Location',
+    dateInfo: 'From 2018 to 2021',
+    description: 'Salento University\n🚧 Work in progress...',
+    // school: 'Salento University',
+    // location: 'Location',
     icon: logoPolito.src,
   },
 ];

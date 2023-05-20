@@ -8,21 +8,7 @@ export type Skill = {
 
 export const skills: Skill[] = [
   {
-    name: TechnologyName.REACT,
-    level: 2,
-  },
-  {
-    name: TechnologyName.TYPESCRIPT,
-    level: 4,
-    improving: true,
-  },
-  {
-    name: TechnologyName.REACT,
-    level: 2,
-  },
-  {
-    name: TechnologyName.TYPESCRIPT,
-    level: 4,
-    improving: true,
+    name: TechnologyName.NOT_FINISHED,
+    level: 5,
   },
 ];
