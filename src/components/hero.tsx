@@ -133,8 +133,8 @@ export function Hero(): JSX.Element {
             </Title>
 
             <Text className={classes.description} mt={30}>
-              A young developer from Italy, I'm currently a full-stack web
-              developer and DevOps engineer.
+              A young but professional it enthusiast from Italy.<br/>
+              I'm currently a full-stack web developer and DevOps engineer.
             </Text>
 
             <div className={classes.socialsMobile}>
