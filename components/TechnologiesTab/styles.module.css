@@ -1,0 +1,35 @@
+.container {
+  width: 300px; /* TODO: remove */
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  flex-grow: 1;
+
+  border: 2px solid var(--color);
+  border-radius: 0 10px 10px 0;
+
+  padding-inline: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebar {
+  width: 30px;
+  background-color: var(--color);
+  border-radius: 10px 0 0 10px;
+
+  writing-mode: vertical-lr;
+  text-align: center;
+}
+
+.sidebar span {
+  transform: rotate(180deg);
+  display: inline-block;
+}
