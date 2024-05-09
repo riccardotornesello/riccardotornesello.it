@@ -9,7 +9,7 @@
 .content {
   flex-grow: 1;
 
-  border: 2px solid var(--color);
+  border: 3px solid var(--color);
   border-radius: 0 10px 10px 0;
 
   padding-inline: 20px;
@@ -20,7 +20,9 @@
   align-items: center;
 }
 
-.sidebar {
+.label {
+  display: flex;
+
   width: 30px;
   background-color: var(--color);
   border-radius: 10px 0 0 10px;
@@ -29,7 +31,9 @@
   text-align: center;
 }
 
-.sidebar span {
+.label span {
   transform: rotate(180deg);
   display: inline-block;
+
+  margin: auto;
 }

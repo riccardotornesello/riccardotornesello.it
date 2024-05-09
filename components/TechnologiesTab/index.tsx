@@ -15,7 +15,7 @@ export default function TechnologiesTab({
 
   return (
     <div className={styles.container} style={style}>
-      <div className={styles.sidebar}>
+      <div className={styles.label}>
         <span>{label}</span>
       </div>
       <div className={styles.content}>{children}</div>
