@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,react,nextjs,yarn
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,react,nextjs,yarn
+# Created by https://www.toptal.com/developers/gitignore/api/storybookjs,node,react,nextjs,yarn
+# Edit at https://www.toptal.com/developers/gitignore?templates=storybookjs,node,react,nextjs,yarn
 
 ### NextJS ###
 # dependencies
@@ -185,6 +185,12 @@ psd
 thumb
 sketch
 
+### StorybookJs ###
+# gitignore template for the Storybook, UI guide for front apps
+# website: https://storybook.js.org/
+
+storybook-static/
+
 ### yarn ###
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 
@@ -202,4 +208,4 @@ sketch
 # and uncomment the following lines
 # .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/node,react,nextjs,yarn
+# End of https://www.toptal.com/developers/gitignore/api/storybookjs,node,react,nextjs,yarn
