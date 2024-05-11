@@ -21,31 +21,31 @@ const technologies = [
     label: "Servers",
     width: "100%",
     technologies: [
-      {
-        icon: <NginxIcon />,
-        label: "Nginx",
-      },
-      {
-        icon: <LinuxIcon />,
-        label: "Linux",
-        color: "#ddd",
-      },
-      {
-        icon: <DockerIcon />,
-        label: "Docker",
-      },
-      {
-        icon: <KubernetesIcon />,
-        label: "Kubernetes",
-      },
-      {
-        icon: <AwsIcon />,
-        label: "AWS",
-      },
-      {
-        icon: <GoogleCloudIcon />,
-        label: "Google Cloud",
-      },
+      // {
+      //   icon: <NginxIcon />,
+      //   label: "Nginx",
+      // },
+      // {
+      //   icon: <LinuxIcon />,
+      //   label: "Linux",
+      //   color: "#ddd",
+      // },
+      // {
+      //   icon: <DockerIcon />,
+      //   label: "Docker",
+      // },
+      // {
+      //   icon: <KubernetesIcon />,
+      //   label: "Kubernetes",
+      // },
+      // {
+      //   icon: <AwsIcon />,
+      //   label: "AWS",
+      // },
+      // {
+      //   icon: <GoogleCloudIcon />,
+      //   label: "Google Cloud",
+      // },
       {
         icon: <AnsibleIcon />,
         label: "Ansible",
