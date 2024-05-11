@@ -20,32 +20,33 @@ const technologies = [
   {
     label: "Servers",
     width: "100%",
+    rowSize: 5,
     technologies: [
-      // {
-      //   icon: <NginxIcon />,
-      //   label: "Nginx",
-      // },
-      // {
-      //   icon: <LinuxIcon />,
-      //   label: "Linux",
-      //   color: "#ddd",
-      // },
-      // {
-      //   icon: <DockerIcon />,
-      //   label: "Docker",
-      // },
-      // {
-      //   icon: <KubernetesIcon />,
-      //   label: "Kubernetes",
-      // },
-      // {
-      //   icon: <AwsIcon />,
-      //   label: "AWS",
-      // },
-      // {
-      //   icon: <GoogleCloudIcon />,
-      //   label: "Google Cloud",
-      // },
+      {
+        icon: <NginxIcon />,
+        label: "Nginx",
+      },
+      {
+        icon: <LinuxIcon />,
+        label: "Linux",
+        color: "#ddd",
+      },
+      {
+        icon: <DockerIcon />,
+        label: "Docker",
+      },
+      {
+        icon: <KubernetesIcon />,
+        label: "Kubernetes",
+      },
+      {
+        icon: <AwsIcon />,
+        label: "AWS",
+      },
+      {
+        icon: <GoogleCloudIcon />,
+        label: "Google Cloud",
+      },
       {
         icon: <AnsibleIcon />,
         label: "Ansible",
@@ -60,6 +61,7 @@ const technologies = [
   {
     label: "Backend",
     width: "50%",
+    rowSize: 3,
     technologies: [
       {
         icon: <PythonIcon />,
@@ -78,6 +80,7 @@ const technologies = [
   {
     label: "Frontend",
     width: "50%",
+    rowSize: 3,
     technologies: [
       {
         icon: <ReactIcon />,
@@ -102,7 +105,11 @@ export default function Home() {
       >
         {technologies.map((tab) => (
           <div key={tab.label} style={{ width: tab.width, padding: "10px" }}>
-            <TechnologiesTab label={tab.label} color="#0f0">
+            <TechnologiesTab
+              label={tab.label}
+              color="#0f0"
+              maxRowSize={tab.rowSize}
+            >
               {tab.technologies.map((technology) => (
                 <TechnologyIcon
                   key={technology.label}

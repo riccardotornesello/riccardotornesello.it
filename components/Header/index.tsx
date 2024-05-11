@@ -1,5 +1,3 @@
-"use client";
-
 import clsx from "clsx";
 import { clashDisplay } from "@/assets/fonts";
 import avatar from "@/assets/pictures/avatar.png";
