@@ -1,4 +1,4 @@
-@value smallRadius: 80px;
+@value smallRadius: 60px;
 @value bigRadius: 120px;
 @value smallBorderGap: 10px;
 @value bigBorderGap: 20px;
@@ -14,46 +14,35 @@
 }
 
 .circle {
-  width: calc((bigRadius + bigBorderGap) * 2);
-  height: calc((bigRadius + bigBorderGap) * 2);
+  width: calc((smallRadius + smallBorderGap) * 2);
+  height: calc((smallRadius + smallBorderGap) * 2);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .image {
-  width: calc(bigRadius * 2);
-  height: calc(bigRadius * 2);
+  width: calc(smallRadius * 2);
+  height: calc(smallRadius * 2);
   border-radius: 50%;
   object-fit: cover;
 }
 
 .border {
   position: absolute;
-  width: calc((bigRadius + bigBorderGap) * 2);
-  height: calc((bigRadius + bigBorderGap) * 2);
+  width: calc((smallRadius + smallBorderGap) * 2);
+  height: calc((smallRadius + smallBorderGap) * 2);
   border-radius: 50%;
   border-width: thickness;
   border-style: dashed;
   border-color: var(--primary-color);
   animation: spin 120s linear infinite;
-}
-
-@media (min-width: 768px) {
-  .circle {
-    width: calc((smallRadius + smallBorderGap) * 2);
-    height: calc((smallRadius + smallBorderGap) * 2);
-  }
-
-  .image {
-    width: calc(smallRadius * 2);
-    height: calc(smallRadius * 2);
-  }
-
-  .border {
-    width: calc((smallRadius + smallBorderGap) * 2);
-    height: calc((smallRadius + smallBorderGap) * 2);
-  }
 }
 
 @media (min-width: 992px) {

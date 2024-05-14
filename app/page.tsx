@@ -1,6 +1,8 @@
 import TechnologiesTab from "@/components/TechnologiesTab";
 import TechnologyIcon from "@/components/TechnologyIcon";
 import Header from "@/components/Header";
+import Subtitle from "@/components/Subtitle";
+import Highlight from "@/components/Highlight";
 
 import NginxIcon from "devicon/icons/nginx/nginx-original.svg";
 import LinuxIcon from "devicon/icons/linux/linux-plain.svg";
@@ -100,28 +102,37 @@ export default function Home() {
     <main>
       <Header />
 
-      <div
-        style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
-      >
-        {technologies.map((tab) => (
-          <div key={tab.label} style={{ width: tab.width, padding: "10px" }}>
-            <TechnologiesTab
-              label={tab.label}
-              color="#0f0"
-              maxRowSize={tab.rowSize}
-            >
-              {tab.technologies.map((technology) => (
-                <TechnologyIcon
-                  key={technology.label}
-                  icon={technology.icon}
-                  color={technology.color}
-                >
-                  {technology.label}
-                </TechnologyIcon>
-              ))}
-            </TechnologiesTab>
-          </div>
-        ))}
+      <div style={{ marginTop: "40px" }}>
+        <Subtitle>
+          The <Highlight>technologies</Highlight> I master
+        </Subtitle>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {technologies.map((tab) => (
+            <div key={tab.label} style={{ width: tab.width, padding: "10px" }}>
+              <TechnologiesTab
+                label={tab.label}
+                color="#0f0"
+                maxRowSize={tab.rowSize}
+              >
+                {tab.technologies.map((technology) => (
+                  <TechnologyIcon
+                    key={technology.label}
+                    icon={technology.icon}
+                    color={technology.color}
+                  >
+                    {technology.label}
+                  </TechnologyIcon>
+                ))}
+              </TechnologiesTab>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
