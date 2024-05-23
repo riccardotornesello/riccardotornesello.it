@@ -17,6 +17,7 @@ import DjangoIcon from "devicon/icons/django/django-plain.svg";
 import NodejsIcon from "devicon/icons/nodejs/nodejs-plain.svg";
 import ReactIcon from "devicon/icons/react/react-original.svg";
 import NextjsIcon from "devicon/icons/nextjs/nextjs-original-wordmark.svg";
+import Link from "@/components/Link";
 
 const technologies = [
   {
@@ -101,6 +102,11 @@ export default function Home() {
   return (
     <main>
       <Header />
+
+      <Link href="/about">
+        <span>About</span>
+        <KubernetesIcon />
+      </Link>
 
       <div style={{ marginTop: "40px" }}>
         <Subtitle>
