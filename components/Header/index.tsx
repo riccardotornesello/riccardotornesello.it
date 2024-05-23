@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { clashDisplay } from "@/assets/fonts";
-import avatar from "@/assets/pictures/avatar.png";
+import avatar from "@/assets/pictures/avatar.jpg";
 import Circle from "@/components/Circle";
 import styles from "./styles.module.css";
 
