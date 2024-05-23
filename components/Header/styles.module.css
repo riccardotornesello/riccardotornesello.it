@@ -73,3 +73,19 @@
     top: 50%;
   }
 }
+
+.links {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 50px;
+
+  @media (min-width: 992px) {
+    margin-top: 0;
+    justify-content: flex-start;
+  }
+}

@@ -1,7 +1,11 @@
 import clsx from "clsx";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+
 import { clashDisplay } from "@/assets/fonts";
 import avatar from "@/assets/pictures/avatar.png";
 import Circle from "@/components/Circle";
+import Link from "@/components/Link";
+
 import styles from "./styles.module.css";
 
 export default function Header() {
@@ -24,6 +28,17 @@ export default function Header() {
         </div>
 
         <Circle>{avatar}</Circle>
+      </div>
+
+      <div className={styles.links}>
+        <Link href="https://www.linkedin.com/in/riccardotornesello/">
+          <span>LinkedIn</span>
+          <IconBrandLinkedin color="white" />
+        </Link>
+        <Link href="https://github.com/riccardotornesello">
+          <span>GitHub</span>
+          <IconBrandGithub color="white" />
+        </Link>
       </div>
     </header>
   );

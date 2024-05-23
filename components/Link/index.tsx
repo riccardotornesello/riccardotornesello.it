@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import styles from "./styles.module.css";
 
 export type LinkProps = {
@@ -6,11 +7,9 @@ export type LinkProps = {
 };
 
 export default function Link({ href, children }: LinkProps) {
-  // TODO: use next link
-
   return (
-    <a className={styles.link} href={href}>
+    <NextLink className={styles.link} href={href} target="_blank">
       {children}
-    </a>
+    </NextLink>
   );
 }
