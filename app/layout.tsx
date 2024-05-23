@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { outfit } from "@/assets/fonts";
+import { montserrat } from "@/assets/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className}>{children}</body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

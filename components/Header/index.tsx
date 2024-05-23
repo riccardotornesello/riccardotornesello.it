@@ -1,7 +1,5 @@
-import clsx from "clsx";
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 
-import { clashDisplay } from "@/assets/fonts";
 import avatar from "@/assets/pictures/avatar.png";
 import Circle from "@/components/Circle";
 import Link from "@/components/Link";
@@ -12,7 +10,7 @@ export default function Header() {
   // TODO: if the h1 goes to the next line, the width of the header should be reduced
 
   return (
-    <header className={clsx(clashDisplay.className, styles.header)}>
+    <header className={styles.header}>
       <div className={styles.triangle}>
         <Triangle />
       </div>

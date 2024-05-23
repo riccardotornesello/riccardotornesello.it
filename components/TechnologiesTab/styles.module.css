@@ -29,7 +29,6 @@
   background-color: var(--color);
   border-radius: 10px 0 0 10px;
   color: var(--label-text-color);
-  font-weight: 300;
 
   writing-mode: vertical-lr;
   text-align: center;
