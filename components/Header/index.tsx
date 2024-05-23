@@ -43,7 +43,7 @@ function Triangle() {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         gradientTransform="matrix(1 0 0 -1 0 535.89)"
         gradientUnits="userSpaceOnUse"
-        id="a"
+        id="gradient_triangle"
         x1="176"
         x2="176"
         xlinkActuate="onLoad"
@@ -58,7 +58,7 @@ function Triangle() {
       <path
         d="M1.7,268L351,2v531.5L1.7,268z"
         fill="none"
-        stroke="url(#a)"
+        stroke="url(#gradient_triangle)"
         strokeWidth="5"
       />
     </svg>
