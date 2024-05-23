@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-
+{/* 
       <div style={{ marginTop: "40px" }}>
         <Subtitle>
           The <Highlight>technologies</Highlight> I master
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
