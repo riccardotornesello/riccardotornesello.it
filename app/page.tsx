@@ -3,6 +3,7 @@ import TechnologyIcon from "@/components/TechnologyIcon";
 import Header from "@/components/Header";
 import Subtitle from "@/components/Subtitle";
 import Highlight from "@/components/Highlight";
+import Container from "@/components/Container";
 
 import NginxIcon from "devicon/icons/nginx/nginx-original.svg";
 import LinuxIcon from "devicon/icons/linux/linux-plain.svg";
@@ -100,8 +101,9 @@ const technologies = [
 export default function Home() {
   return (
     <main>
-      <Header />
-{/* 
+      <Container maxWidth="1400px">
+        <Header />
+        {/* 
       <div style={{ marginTop: "40px" }}>
         <Subtitle>
           The <Highlight>technologies</Highlight> I master
@@ -134,6 +136,7 @@ export default function Home() {
           ))}
         </div>
       </div> */}
+      </Container>
     </main>
   );
 }

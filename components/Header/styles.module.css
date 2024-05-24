@@ -1,9 +1,7 @@
 .header {
   position: relative;
   width: 100%;
-  max-width: 1400px;
 
-  margin: auto;
   padding-block: 100px;
   padding-inline: 80px;
 
