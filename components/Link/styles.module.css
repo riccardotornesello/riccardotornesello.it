@@ -1,7 +1,7 @@
 .link {
   display: inline-flex;
-  height: 70px;
-  padding: 0 15px 0 50px;
+  height: 60px;
+  padding: 0 10px 0 30px;
   background-color: var(--primary-color);
   cursor: pointer;
   align-items: center;
@@ -11,13 +11,24 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  font-size: 0.8rem;
+
+  @media (min-width: 992px) {
+    padding: 0 15px 0 50px;
+    font-size: 1rem;
+    height: 70px;
+  }
 }
 
 .link svg {
-  margin-left: 30px;
+  margin-left: 20px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   padding: 10px;
   background-color: rgb(0, 0, 0);
+
+  @media (min-width: 992px) {
+    margin-left: 30px;
+  }
 }

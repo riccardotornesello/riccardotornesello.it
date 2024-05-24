@@ -8,6 +8,8 @@
 
   background-image: radial-gradient(#777 5%, transparent 0);
   background-size: 50px 50px;
+
+  overflow: hidden;
 }
 
 .content {
