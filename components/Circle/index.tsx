@@ -7,28 +7,13 @@ export type CircleProps = {
 
 export default function Circle({ children }: CircleProps) {
   return (
-    <div
-      style={{
-        width: "250px",
-        height: "250px",
-        borderRadius: "50%",
-        overflow: "hidden",
-        display: "flex",
-      }}
-    >
+    <div className={styles.container}>
       <Image
         style={{ width: "250px", height: "250px", objectFit: "cover" }}
         src={children}
         alt="avatar"
       />
-      <div
-        style={{
-          position: "absolute",
-          width: "250px",
-          height: "250px",
-          animation: `${styles.spin} 5s linear infinite`,
-        }}
-      >
+      <div className={styles.border}>
         <GradientBorder />
       </div>
     </div>
