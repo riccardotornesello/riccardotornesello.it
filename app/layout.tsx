@@ -3,7 +3,7 @@ import { montserrat } from "@/assets/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Riccardo Tornesello. Hi! 👋",
+  title: "Riccardo Tornesello",
   description: "I'm Riccardo Tornesello, a software engineer based in Italy.",
 };
 
