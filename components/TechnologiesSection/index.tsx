@@ -2,13 +2,14 @@ import TechnologiesTab from "@/components/TechnologiesTab";
 import TechnologyIcon from "@/components/TechnologyIcon";
 import Subtitle from "@/components/Subtitle";
 import Highlight from "@/components/Highlight";
+import type { TechnologyGroup } from "@/data/technologies";
 
 export type TechnologiesSectionProps = {
-  readonly technologies: any; // TODO
+  readonly technologyGroups: TechnologyGroup[];
 };
 
 export default function TechnologiesSection({
-  technologies,
+  technologyGroups,
 }: TechnologiesSectionProps) {
   return (
     <div style={{ marginTop: "40px" }}>
@@ -22,7 +23,7 @@ export default function TechnologiesSection({
           flexWrap: "wrap",
         }}
       >
-        {technologies.map((tab) => (
+        {technologyGroups.map((tab) => (
           <TechnologiesTab
             key={tab.label}
             label={tab.label}
