@@ -209,3 +209,5 @@ storybook-static/
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/storybookjs,node,react,nextjs,yarn
+# Sentry Config File
+.env.sentry-build-plugin
