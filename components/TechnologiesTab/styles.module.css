@@ -1,16 +1,25 @@
 .container {
-  width: 100%;
-  min-height: 120px;
+  width: calc(var(--size-sm) / 12 * 100%);
+  padding: 10px; /* TODO: gap only between elements */
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    width: calc(var(--size-lg) / 12 * 100%);
+  }
 }
 
 .content {
   flex-grow: 1;
 
   border: 3px solid var(--color);
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 0 10px 10px;
+
+  @media (min-width: 992px) {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .row {
@@ -25,18 +34,25 @@
 .label {
   display: flex;
 
-  width: 30px;
+  border-radius: 10px 10px 0 0;
   background-color: var(--color);
-  border-radius: 10px 0 0 10px;
   color: var(--label-text-color);
 
-  writing-mode: vertical-lr;
   text-align: center;
+
+  @media (min-width: 992px) {
+    writing-mode: vertical-lr;
+    width: 30px;
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .label span {
-  transform: rotate(180deg);
   display: inline-block;
 
   margin: auto;
+
+  @media (min-width: 992px) {
+    transform: rotate(180deg);
+  }
 }

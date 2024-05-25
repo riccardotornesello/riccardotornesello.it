@@ -1,9 +1,6 @@
-import TechnologiesTab from "@/components/TechnologiesTab";
-import TechnologyIcon from "@/components/TechnologyIcon";
 import Header from "@/components/Header";
-import Subtitle from "@/components/Subtitle";
-import Highlight from "@/components/Highlight";
 import Container from "@/components/Container";
+import TechnologiesSection from "@/components/TechnologiesSection";
 
 import NginxIcon from "devicon/icons/nginx/nginx-original.svg";
 import LinuxIcon from "devicon/icons/linux/linux-plain.svg";
@@ -22,8 +19,12 @@ import NextjsIcon from "devicon/icons/nextjs/nextjs-original-wordmark.svg";
 const technologies = [
   {
     label: "Servers",
-    width: "100%",
-    rowSize: 5,
+    width: {
+      sm: 12,
+      lg: 12,
+    },
+    rowSize: 4,
+    color: "#0f0",
     technologies: [
       {
         icon: <NginxIcon />,
@@ -57,14 +58,18 @@ const technologies = [
       {
         icon: <TerraformIcon />,
         label: "Terraform",
-        color: "#ddd",
+        color: "#657FF4",
       },
     ],
   },
   {
     label: "Backend",
-    width: "50%",
+    width: {
+      sm: 12,
+      lg: 6,
+    },
     rowSize: 3,
+    color: "#0f0",
     technologies: [
       {
         icon: <PythonIcon />,
@@ -82,8 +87,12 @@ const technologies = [
   },
   {
     label: "Frontend",
-    width: "50%",
+    width: {
+      sm: 12,
+      lg: 6,
+    },
     rowSize: 3,
+    color: "#0f0",
     technologies: [
       {
         icon: <ReactIcon />,
@@ -103,39 +112,7 @@ export default function Home() {
     <main>
       <Container maxWidth="1400px">
         <Header />
-        {/* 
-      <div style={{ marginTop: "40px" }}>
-        <Subtitle>
-          The <Highlight>technologies</Highlight> I master
-        </Subtitle>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          {technologies.map((tab) => (
-            <div key={tab.label} style={{ width: tab.width, padding: "10px" }}>
-              <TechnologiesTab
-                label={tab.label}
-                color="#0f0"
-                maxRowSize={tab.rowSize}
-              >
-                {tab.technologies.map((technology) => (
-                  <TechnologyIcon
-                    key={technology.label}
-                    icon={technology.icon}
-                    color={technology.color}
-                  >
-                    {technology.label}
-                  </TechnologyIcon>
-                ))}
-              </TechnologiesTab>
-            </div>
-          ))}
-        </div>
-      </div> */}
+        <TechnologiesSection technologies={technologies} />
       </Container>
     </main>
   );
