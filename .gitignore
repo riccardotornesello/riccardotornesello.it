@@ -1,3 +1,6 @@
+robots.txt
+sitemap*.xml
+
 # Created by https://www.toptal.com/developers/gitignore/api/storybookjs,node,react,nextjs,yarn
 # Edit at https://www.toptal.com/developers/gitignore?templates=storybookjs,node,react,nextjs,yarn
 
