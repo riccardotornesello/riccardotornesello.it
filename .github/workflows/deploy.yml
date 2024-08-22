@@ -24,8 +24,7 @@ jobs:
 
       - name: Build
         run: yarn build
-        with:
-          environment: production
+        environment: release
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
@@ -38,4 +37,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy out --project-name=riccardotornesello-it
-          environment: production
+          environment: release
