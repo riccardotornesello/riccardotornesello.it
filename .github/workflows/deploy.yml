@@ -25,16 +25,27 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Get package version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
       - name: Deploy to CloudFlare Pages
         uses: cloudflare/wrangler-action@v3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy out --project-name=riccardotornesello-it
+          environment: production
 
-      # - name: Create Sentry release
-      #   uses: getsentry/action-release@v1
-      #   env:
-      #     SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-      #     SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-      #     SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        with:
+          environment: production
+          version: ${{ steps.package-version.outputs.version }}-${{ github.sha }}
