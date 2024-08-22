@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: release
 
     steps:
       - name: Checkout
@@ -24,7 +25,6 @@ jobs:
 
       - name: Build
         run: yarn build
-        environment: release
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
