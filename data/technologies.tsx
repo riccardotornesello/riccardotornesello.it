@@ -1,19 +1,20 @@
-import NginxIcon from "devicon/icons/nginx/nginx-original.svg";
-import LinuxIcon from "devicon/icons/linux/linux-plain.svg";
-import DockerIcon from "devicon/icons/docker/docker-plain.svg";
-import KubernetesIcon from "devicon/icons/kubernetes/kubernetes-plain.svg";
-import AwsIcon from "devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg";
-import GoogleCloudIcon from "devicon/icons/googlecloud/googlecloud-plain.svg";
-import AnsibleIcon from "devicon/icons/ansible/ansible-plain.svg";
-import TerraformIcon from "devicon/icons/terraform/terraform-plain.svg";
-import PythonIcon from "devicon/icons/python/python-plain.svg";
-import DjangoIcon from "devicon/icons/django/django-plain.svg";
-import NodejsIcon from "devicon/icons/nodejs/nodejs-plain.svg";
-import ReactIcon from "devicon/icons/react/react-original.svg";
-import NextjsIcon from "devicon/icons/nextjs/nextjs-original-wordmark.svg";
+import NginxIcon from "@/assets/icons/nginx-original.svg";
+import LinuxIcon from "@/assets/icons/linux-plain.svg";
+import DockerIcon from "@/assets/icons/docker-plain.svg";
+import KubernetesIcon from "@/assets/icons/kubernetes-plain.svg";
+import AwsIcon from "@/assets/icons/amazonwebservices-plain-wordmark.svg";
+import GoogleCloudIcon from "@/assets/icons/googlecloud-plain-wordmark.svg";
+import AnsibleIcon from "@/assets/icons/ansible-plain-wordmark.svg";
+import TerraformIcon from "@/assets/icons/terraform-plain-wordmark.svg";
+import PythonIcon from "@/assets/icons/python-plain-wordmark.svg";
+import DjangoIcon from "@/assets/icons/django-plain-wordmark.svg";
+import NodejsIcon from "@/assets/icons/nodejs-plain-wordmark.svg";
+import ReactIcon from "@/assets/icons/react-original.svg";
+import NextjsIcon from "@/assets/icons/nextjs-plain.svg";
+import { FC, SVGProps } from "react";
 
 export type Technology = {
-  icon: JSX.Element;
+  icon: FC<SVGProps<SVGElement>>;
   label: string;
   color?: string;
 };
@@ -40,36 +41,36 @@ export const technologyGroups: TechnologyGroup[] = [
     color: "#0f0",
     technologies: [
       {
-        icon: <NginxIcon />,
+        icon: NginxIcon,
         label: "Nginx",
       },
       {
-        icon: <LinuxIcon />,
+        icon: LinuxIcon,
         label: "Linux",
         color: "#ddd",
       },
       {
-        icon: <DockerIcon />,
+        icon: DockerIcon,
         label: "Docker",
       },
       {
-        icon: <KubernetesIcon />,
+        icon: KubernetesIcon,
         label: "Kubernetes",
       },
       {
-        icon: <AwsIcon />,
+        icon: AwsIcon,
         label: "AWS",
       },
       {
-        icon: <GoogleCloudIcon />,
+        icon: GoogleCloudIcon,
         label: "Google Cloud",
       },
       {
-        icon: <AnsibleIcon />,
+        icon: AnsibleIcon,
         label: "Ansible",
       },
       {
-        icon: <TerraformIcon />,
+        icon: TerraformIcon,
         label: "Terraform",
         color: "#657FF4",
       },
@@ -85,15 +86,15 @@ export const technologyGroups: TechnologyGroup[] = [
     color: "#0f0",
     technologies: [
       {
-        icon: <PythonIcon />,
+        icon: PythonIcon,
         label: "Python",
       },
       {
-        icon: <DjangoIcon />,
+        icon: DjangoIcon,
         label: "Django",
       },
       {
-        icon: <NodejsIcon />,
+        icon: NodejsIcon,
         label: "Node JS",
       },
     ],
@@ -108,11 +109,11 @@ export const technologyGroups: TechnologyGroup[] = [
     color: "#0f0",
     technologies: [
       {
-        icon: <ReactIcon />,
+        icon: ReactIcon,
         label: "React",
       },
       {
-        icon: <NextjsIcon />,
+        icon: NextjsIcon,
         label: "Next.js",
         color: "#ddd",
       },
