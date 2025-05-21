@@ -25,6 +25,7 @@ export interface Certification {
   issuingBody: string
   date?: string
   credentialUrl?: string
+  pictureUrl?: string
 }
 
 export interface Experience {

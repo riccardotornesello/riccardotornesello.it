@@ -11,14 +11,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div className="bg-brutalist-background border-3 border-brutalist-border p-6 shadow-brutalist hover:shadow-brutalist-hover transition-shadow duration-200">
       {project.imageUrl && (
         <img
-          height={48}
           src={project.imageUrl}
           alt={project.title}
           className="w-full h-48 object-cover mb-4 border-3 border-brutalist-border"
-          onError={(e) =>
-            (e.currentTarget.src =
-              "https/images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
-          }
         />
       )}
 

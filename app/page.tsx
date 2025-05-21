@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react"
 import Footer from "@/components/Footer"
 import { Hero } from "@/components/sections/Hero"
@@ -8,7 +6,6 @@ import { experience } from "@/lib/data/experience"
 import { personalProjects } from "@/lib/data/projects"
 import { extraActivities } from "@/lib/data/activities"
 import { skills } from "@/lib/data/skills"
-import { certifications } from "@/lib/data/certifications"
 import { AboutSection } from "@/components/sections/AboutSection"
 import { EducationSection } from "@/components/sections/EducationSection"
 import { aboutMe, title, name, description } from "@/lib/data/about"
@@ -17,8 +14,11 @@ import { ExperienceSection } from "@/components/sections/ExperienceSection"
 import { ProjectsSection } from "@/components/sections/ProjectsSection"
 import { ActivitiesSection } from "@/components/sections/ActivitiesSection"
 import { SkillsSection } from "@/components/sections/SkillsSection"
+import { parseCredlyCertifications } from "@/lib/credly"
 
-export default function Home() {
+export default async function Home() {
+  const credlyBadges = await parseCredlyCertifications()
+
   return (
     <div className="min-h-screen flex flex-col bg-brutalist-background">
       <main className="flex-grow">
@@ -30,7 +30,7 @@ export default function Home() {
         />
         <AboutSection aboutMe={aboutMe} />
         <EducationSection education={education} />
-        <CertificationsSection certifications={certifications} />
+        <CertificationsSection certifications={credlyBadges} />
         <ExperienceSection experience={experience} />
         <ProjectsSection personalProjects={personalProjects} />
         <ActivitiesSection extraActivities={extraActivities} />
