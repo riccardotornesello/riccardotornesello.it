@@ -1,14 +1,8 @@
-import { SkillLevel } from "@/lib/constants"
+import { SkillLevel, SkillsGroup } from "@/lib/types"
 import React from "react"
 
 interface SkillCategoryProps {
-  categoryName: string
-  skills: Skill[]
-}
-
-interface Skill {
-  name: string
-  level: SkillLevel
+  skillsGroup: SkillsGroup
 }
 
 interface SkillLevelOptions {
@@ -45,17 +39,14 @@ const getLevelWidth = (level: SkillLevel) => {
   return width
 }
 
-const SkillCategory: React.FC<SkillCategoryProps> = ({
-  categoryName,
-  skills,
-}) => {
+const SkillCategory: React.FC<SkillCategoryProps> = ({ skillsGroup }) => {
   return (
     <div className="mb-8 p-6 border-3 border-brutalist-border shadow-brutalist">
       <h3 className="text-2xl font-bold mb-6 text-brutalist-foreground">
-        {categoryName}
+        {skillsGroup.name}
       </h3>
       <div className="space-y-4">
-        {skills.map((skill) => (
+        {skillsGroup.skills.map((skill) => (
           <div
             key={skill.name}
             className="flex flex-col md:flex-row md:items-center md:justify-between"
