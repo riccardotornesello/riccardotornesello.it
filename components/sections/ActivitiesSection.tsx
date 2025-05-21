@@ -15,10 +15,8 @@ export const ActivitiesSection: React.FC<ActivitiesSectionProps> = ({
       id="extra-activities"
       title="Attività e Community"
       className="bg-brutalist-secondary text-brutalist-background"
+      icon={ArchiveIcon}
     >
-      <div className="flex justify-center mb-4">
-        <ArchiveIcon size={32} className="text-brutalist-accent" />
-      </div>
       <div className="grid md:grid-cols-2 gap-8">
         {extraActivities.map((activity, index) => (
           <ExtraActivityCard key={index} activity={activity} />
