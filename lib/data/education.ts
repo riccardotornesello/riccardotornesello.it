@@ -2,16 +2,15 @@ import { Education } from "../types"
 
 export const education: Education[] = [
   {
-    degree: "Laurea Magistrale in Ingegneria Informatica",
-    institution: "Politecnico di Milano",
-    year: "2018 - 2020",
+    degree: "Master's Degree in Computer Engineering",
+    institution: "Politecnico di Torino",
+    year: "2021 - In progress",
     description:
-      "Specializzazione in Cloud Computing e Big Data. Tesi sull'orchestrazione di microservizi.",
+      "Computer Networks and Cloud Computing specialization. Graduation soon, in next stable release.",
   },
   {
-    degree: "Laurea Triennale in Ingegneria Informatica",
-    institution: "Università degli Studi di Bologna",
-    year: "2015 - 2018",
-    description: "Focus su programmazione, algoritmi e sistemi operativi.",
+    degree: "Bachelor's Degree in Information Engineering",
+    institution: "Università del Salento",
+    year: "2018 - 2021",
   },
 ]

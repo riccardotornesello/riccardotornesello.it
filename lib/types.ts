@@ -17,7 +17,7 @@ export interface Education {
   degree: string
   institution: string
   year: string
-  description: string
+  description?: string
 }
 
 export interface Certification {

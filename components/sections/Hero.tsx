@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({
     >
       <div className="container mx-auto">
         <div className="flex flex-col items-center mb-8">
-          <Avatar className="h-24 w-24 md:h-32 md:w-32 border-3 border-brutalist-border shadow-brutalist-lg mb-4">
+          <Avatar className="h-32 w-32 md:h-42 md:w-42 border-3 border-brutalist-border shadow-brutalist-lg mb-4">
             <AvatarImage src={profileImageUrl} alt={name} />
             <AvatarFallback className="bg-brutalist-background text-brutalist-primary font-bold text-4xl">
               {initials}
@@ -43,13 +43,6 @@ export const Hero: React.FC<HeroProps> = ({
         <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
           {description}
         </p>
-
-        <a
-          href="#projects"
-          className="bg-brutalist-accent text-white hover:bg-opacity-80 font-bold py-3 px-8 border-3 border-brutalist-border shadow-brutalist hover:shadow-brutalist-hover transition-shadow duration-200 text-lg"
-        >
-          Scopri i Miei Progetti
-        </a>
       </div>
     </section>
   )

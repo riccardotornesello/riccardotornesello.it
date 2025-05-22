@@ -19,7 +19,9 @@ export const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
 
       <p className="text-sm text-muted-foreground mb-2">{education.year}</p>
 
-      <p className="text-sm">{education.description}</p>
+      {education.description && (
+        <p className="text-sm">{education.description}</p>
+      )}
     </div>
   )
 }

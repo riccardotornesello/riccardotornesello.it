@@ -1,7 +1,19 @@
 import React from "react"
 import { Linkedin, Github, Mail } from "lucide-react"
 
-const Footer = () => {
+interface FooterProps {
+  name: string
+  githubUrl: string
+  linkedinUrl: string
+  email: string
+}
+
+const Footer: React.FC<FooterProps> = ({
+  name,
+  githubUrl,
+  linkedinUrl,
+  email,
+}) => {
   return (
     <footer
       id="contact"
@@ -11,7 +23,7 @@ const Footer = () => {
         <h2 className="text-2xl font-bold mb-6">Mettiamoci in contatto!</h2>
         <div className="flex justify-center space-x-6 mb-8">
           <a
-            href="mailto:tuaemail@example.com"
+            href={`mailto:${email}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email"
@@ -20,7 +32,7 @@ const Footer = () => {
             <Mail size={32} />
           </a>
           <a
-            href="https://linkedin.com/in/tuoprofilo"
+            href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -29,7 +41,7 @@ const Footer = () => {
             <Linkedin size={32} />
           </a>
           <a
-            href="https://github.com/tuoutente"
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -39,12 +51,11 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Nome Cognome. Tutti i diritti
-          riservati.
+          &copy; {new Date().getFullYear()} {name}. All rights reserved.
         </p>
         <p className="text-xs mt-2">
-          Realizzato con <span className="text-brutalist-accent">♥</span> e
-          codice.
+          Realized with <span className="text-brutalist-accent">♥</span> and
+          code.
         </p>
       </div>
     </footer>

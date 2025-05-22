@@ -10,7 +10,7 @@ export function EducationSection({ education }: EducationSectionProps) {
   return (
     <Section
       id="education"
-      title="Formazione"
+      title="Education"
       className="bg-brutalist-secondary text-brutalist-background"
     >
       <div className="max-w-3xl mx-auto space-y-8">

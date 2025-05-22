@@ -1,5 +1,5 @@
 import React from "react"
-import { Archive } from "lucide-react"
+import { Archive, LinkIcon } from "lucide-react"
 import { ExtraActivity } from "@/lib/types"
 
 interface ExtraActivityCardProps {
@@ -29,7 +29,8 @@ const ExtraActivityCard: React.FC<ExtraActivityCardProps> = ({ activity }) => {
           rel="noopener noreferrer"
           className="inline-flex items-center text-brutalist-background bg-brutalist-primary hover:bg-opacity-80 px-3 py-1.5 border-2 border-brutalist-border shadow-brutalist-sm text-xs font-medium"
         >
-          Maggiori Info
+          <LinkIcon size={16} className="mr-2" />
+          More info
         </a>
       )}
     </div>

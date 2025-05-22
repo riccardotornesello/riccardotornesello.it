@@ -2,19 +2,11 @@ import { ExtraActivity } from "../types"
 
 export const extraActivities: ExtraActivity[] = [
   {
-    title: "Membro Attivo & Speaker",
-    organization: "Google Developer Group - Milano",
-    period: "2019 - Presente",
+    title: "Active member",
+    organization: "Google Developer Group - Lecce",
+    period: "2025 - Present",
     description:
-      "Organizzazione di eventi, workshop e presentazioni su tecnologie Cloud e DevOps. Contributo alla crescita della community tech locale.",
-    link: "#",
-  },
-  {
-    title: "Contributor Progetto Open Source",
-    organization: "Awesome Kubernetes Tools",
-    period: "2021 - Presente",
-    description:
-      "Manutenzione e aggiunta di nuove funzionalità a una popolare lista curata di strumenti per Kubernetes.",
-    link: "#",
+      "Organizing events, workshops and presentations. Contributing to the growth of the local tech community.",
+    link: "https://gdg.community.dev/gdg-lecce/",
   },
 ]

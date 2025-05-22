@@ -8,13 +8,23 @@ import { extraActivities } from "@/lib/data/activities"
 import { skills } from "@/lib/data/skills"
 import { AboutSection } from "@/components/sections/AboutSection"
 import { EducationSection } from "@/components/sections/EducationSection"
-import { aboutMe, title, name, description } from "@/lib/data/about"
+import {
+  aboutMe,
+  title,
+  name,
+  description,
+  credlyUrl,
+  githubUrl,
+  linkedinUrl,
+  email,
+} from "@/lib/data/about"
 import { CertificationsSection } from "@/components/sections/CertificationsSection"
 import { ExperienceSection } from "@/components/sections/ExperienceSection"
 import { ProjectsSection } from "@/components/sections/ProjectsSection"
 import { ActivitiesSection } from "@/components/sections/ActivitiesSection"
 import { SkillsSection } from "@/components/sections/SkillsSection"
 import { parseCredlyCertifications } from "@/lib/credly"
+import Avatar from "@/lib/assets/avatar.png"
 
 export default async function Home() {
   const credlyBadges = await parseCredlyCertifications()
@@ -23,20 +33,28 @@ export default async function Home() {
     <div className="min-h-screen flex flex-col bg-brutalist-background">
       <main className="flex-grow">
         <Hero
-          profileImageUrl="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80&h=150"
+          profileImageUrl={Avatar.src}
           title={title}
           name={name}
           description={description}
         />
-        <AboutSection aboutMe={aboutMe} />
+        {aboutMe.length > 0 && <AboutSection aboutMe={aboutMe} />}
         <EducationSection education={education} />
-        <CertificationsSection certifications={credlyBadges} />
+        <CertificationsSection
+          certifications={credlyBadges}
+          credlyUrl={credlyUrl}
+        />
         <ExperienceSection experience={experience} />
         <ProjectsSection personalProjects={personalProjects} />
         <ActivitiesSection extraActivities={extraActivities} />
         <SkillsSection skills={skills} />
       </main>
-      <Footer />
+      <Footer
+        name={name}
+        githubUrl={githubUrl}
+        linkedinUrl={linkedinUrl}
+        email={email}
+      />
     </div>
   )
 }

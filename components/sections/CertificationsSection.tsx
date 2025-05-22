@@ -2,14 +2,15 @@ import Section from "@/components/Section"
 import CertificationCard from "@/components/CertificationCard"
 import { Award as AwardIcon } from "lucide-react"
 import { Certification } from "@/lib/types"
-import { credlyUrl } from "@/lib/data/social"
 
 export interface CertificationsSectionProps {
   certifications: Certification[]
+  credlyUrl: string
 }
 
 export const CertificationsSection: React.FC<CertificationsSectionProps> = ({
   certifications,
+  credlyUrl,
 }) => {
   return (
     <Section id="certifications" title="Skill badges" icon={AwardIcon}>
