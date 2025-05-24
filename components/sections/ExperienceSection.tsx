@@ -10,7 +10,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   experience,
 }) => {
   return (
-    <Section id="experience" title="Esperienze Lavorative">
+    <Section id="experience" title="Experience" icon={Briefcase}>
       <div className="max-w-3xl mx-auto space-y-8">
         {experience.map((exp, index) => (
           <div
@@ -25,7 +25,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
               {exp.company}
             </p>
             <p className="text-sm text-muted-foreground mb-2">{exp.period}</p>
-            <p className="text-sm">{exp.description}</p>
+            {exp.description && <p className="text-sm">{exp.description}</p>}
           </div>
         ))}
       </div>

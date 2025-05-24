@@ -22,7 +22,7 @@ export const CertificationsSection: React.FC<CertificationsSectionProps> = ({
       </div>
 
       <div className="mt-6 text-center w-full">
-        <Link href={credlyUrl} size="sm">
+        <Link href={credlyUrl}>
           Check on Credly
         </Link>
       </div>

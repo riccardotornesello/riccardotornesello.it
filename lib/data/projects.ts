@@ -2,31 +2,20 @@ import { PersonalProject } from "../types"
 
 export const personalProjects: PersonalProject[] = [
   {
-    title: "Cloud Cost Optimizer",
+    title: "This portfolio",
     description:
-      "Uno strumento CLI per analizzare e suggerire ottimizzazioni dei costi su AWS, Azure e GCP. Sviluppato in Python con SDK specifici per cloud.",
+      "Sometimes I relax by checking new trends in frontend development. This portfolio is built with Next.js, TypeScript, and Tailwind CSS.",
     imageUrl:
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
-    tags: ["Python", "AWS", "Azure", "GCP", "CLI"],
-    repoUrl: "#",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    repoUrl: "https://github.com/riccardotornesello/riccardotornesello.it",
   },
   {
-    title: "Serverless Data Pipeline",
+    title: "SharedTelemetry",
     description:
-      "Pipeline di dati ETL serverless su AWS Lambda e Kinesis per l'elaborazione di dati di streaming in tempo reale.",
+      "A platform that allows sim-racing organizers to show real time results for their events. Used by SimRacingLeague.it for their qualifying sessions.",
     imageUrl:
       "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
-    tags: ["AWS Lambda", "Kinesis", "Serverless", "ETL"],
-    liveUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    title: "Kubernetes Home Lab",
-    description:
-      "Configurazione di un cluster Kubernetes on-premise per sperimentazione e apprendimento, utilizzando Raspberry Pi.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60",
-    tags: ["Kubernetes", "Raspberry Pi", "Networking", "DevOps"],
-    repoUrl: "#",
+    tags: ["Go", "Google Cloud", "Firestore"],
   },
 ]
