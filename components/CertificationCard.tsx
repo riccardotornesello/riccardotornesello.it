@@ -1,6 +1,7 @@
 import React from "react"
 import { Award } from "lucide-react"
 import { Certification } from "@/lib/types"
+import { Link } from "@/components/ui/link"
 
 interface CertificationCardProps {
   certification: Certification
@@ -35,14 +36,9 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
       )}
 
       {certification.credentialUrl && (
-        <a
-          href={certification.credentialUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center text-brutalist-background bg-brutalist-accent hover:bg-opacity-80 px-3 py-1.5 border-2 border-brutalist-border shadow-brutalist-sm text-xs font-medium"
-        >
+        <Link href={certification.credentialUrl} size="xs">
           See credential
-        </a>
+        </Link>
       )}
     </div>
   )

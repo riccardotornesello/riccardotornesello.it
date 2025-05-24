@@ -2,6 +2,7 @@ import Section from "@/components/Section"
 import CertificationCard from "@/components/CertificationCard"
 import { Award as AwardIcon } from "lucide-react"
 import { Certification } from "@/lib/types"
+import { Link } from "@/components/ui/link"
 
 export interface CertificationsSectionProps {
   certifications: Certification[]
@@ -21,14 +22,9 @@ export const CertificationsSection: React.FC<CertificationsSectionProps> = ({
       </div>
 
       <div className="mt-6 text-center w-full">
-        <a
-          href={credlyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-brutalist-accent text-white hover:bg-opacity-80 font-bold py-3 px-8 border-3 border-brutalist-border shadow-brutalist hover:shadow-brutalist-hover transition-shadow duration-200 text-sm"
-        >
+        <Link href={credlyUrl} size="sm">
           Check on Credly
-        </a>
+        </Link>
       </div>
     </Section>
   )

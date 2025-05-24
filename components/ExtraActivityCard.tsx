@@ -1,6 +1,7 @@
 import React from "react"
 import { Archive, LinkIcon } from "lucide-react"
 import { ExtraActivity } from "@/lib/types"
+import { Link } from "@/components/ui/link"
 
 interface ExtraActivityCardProps {
   activity: ExtraActivity
@@ -23,15 +24,15 @@ const ExtraActivityCard: React.FC<ExtraActivityCardProps> = ({ activity }) => {
       <p className="text-sm mb-3">{activity.description}</p>
 
       {activity.link && (
-        <a
+        <Link
           href={activity.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center text-brutalist-background bg-brutalist-primary hover:bg-opacity-80 px-3 py-1.5 border-2 border-brutalist-border shadow-brutalist-sm text-xs font-medium"
+          size="xs"
+          className="inline-flex items-center"
+          variant="primary"
         >
           <LinkIcon size={16} className="mr-2" />
           More info
-        </a>
+        </Link>
       )}
     </div>
   )

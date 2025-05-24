@@ -1,6 +1,7 @@
 import React from "react"
 import { Github, Link as LinkIcon } from "lucide-react"
 import { PersonalProject } from "@/lib/types"
+import { Link } from "@/components/ui/link"
 
 interface ProjectCardProps {
   project: PersonalProject
@@ -38,24 +39,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       <div className="flex space-x-4">
         {project.liveUrl && (
-          <a
+          <Link
+            size="sm"
+            className="inline-flex items-center"
+            variant="primary"
             href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-brutalist-background bg-brutalist-primary hover:bg-opacity-80 px-4 py-2 border-3 border-brutalist-border shadow-brutalist-sm hover:shadow-brutalist-sm-hover transition-shadow duration-200 text-sm font-medium"
           >
             <LinkIcon size={16} className="mr-2" /> Live Demo
-          </a>
+          </Link>
         )}
         {project.repoUrl && (
-          <a
+          <Link
+            size="sm"
+            className="inline-flex items-center"
+            variant="accent"
             href={project.repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-brutalist-background bg-brutalist-accent hover:bg-opacity-80 px-4 py-2 border-3 border-brutalist-border shadow-brutalist-sm hover:shadow-brutalist-sm-hover transition-shadow duration-200 text-sm font-medium"
           >
             <Github size={16} className="mr-2" /> Repository
-          </a>
+          </Link>
         )}
       </div>
     </div>
