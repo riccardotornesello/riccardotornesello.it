@@ -24,7 +24,7 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection"
 import { ActivitiesSection } from "@/components/sections/ActivitiesSection"
 import { SkillsSection } from "@/components/sections/SkillsSection"
 import { parseCredlyCertifications } from "@/lib/credly"
-import Avatar from "@/lib/assets/avatar.png"
+import Avatar from "@/lib/assets/avatar.webp"
 
 export default async function Home() {
   const credlyBadges = await parseCredlyCertifications()
