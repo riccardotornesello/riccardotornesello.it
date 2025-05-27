@@ -1,6 +1,6 @@
+import { Award as AwardIcon } from "lucide-react"
 import Section from "@/components/Section"
 import CertificationCard from "@/components/CertificationCard"
-import { Award as AwardIcon } from "lucide-react"
 import { Certification } from "@/lib/types"
 import { Link } from "@/components/ui/link"
 

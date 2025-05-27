@@ -1,6 +1,6 @@
+import { EducationCard } from "../EducationCard"
 import Section from "@/components/Section"
 import { Education } from "@/lib/types"
-import { EducationCard } from "../EducationCard"
 
 export interface EducationSectionProps {
   education: Education[]

@@ -1,5 +1,5 @@
-import { SkillLevel, SkillsGroup } from "@/lib/types"
 import React from "react"
+import { SkillLevel, SkillsGroup } from "@/lib/types"
 
 interface SkillCategoryProps {
   skillsGroup: SkillsGroup

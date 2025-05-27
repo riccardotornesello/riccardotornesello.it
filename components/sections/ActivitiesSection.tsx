@@ -1,7 +1,7 @@
+import { Archive as ArchiveIcon } from "lucide-react"
 import Section from "@/components/Section"
 import { ExtraActivity } from "@/lib/types"
 import ExtraActivityCard from "@/components/ExtraActivityCard"
-import { Archive as ArchiveIcon } from "lucide-react"
 
 export interface ActivitiesSectionProps {
   extraActivities: ExtraActivity[]

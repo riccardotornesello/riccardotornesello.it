@@ -1,6 +1,6 @@
+import { Briefcase } from "lucide-react"
 import Section from "@/components/Section"
 import { Experience } from "@/lib/types"
-import { Briefcase } from "lucide-react"
 
 export interface ExperienceSectionProps {
   experience: Experience[]

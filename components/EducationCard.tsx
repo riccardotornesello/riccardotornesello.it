@@ -1,5 +1,5 @@
-import { Education } from "@/lib/types"
 import { Book } from "lucide-react"
+import { Education } from "@/lib/types"
 
 export interface EducationCardProps {
   education: Education
