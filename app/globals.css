@@ -47,6 +47,14 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+@theme {
+  --shadow-brutal: var(--brutal-shadow);
+  --shadow-brutal-lg: var(--brutal-shadow-lg);
+  --shadow-brutal-accent: var(--brutal-shadow-accent);
+  --shadow-glow: var(--glow-primary);
+  --shadow-glow-accent: var(--glow-accent);
+}
+
 :root {
   --radius: 0;
   --background: hsl(222 47% 6%);
