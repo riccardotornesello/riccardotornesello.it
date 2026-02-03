@@ -1,45 +1,17 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { type FC } from "react";
-import { SectionHeader } from "./section-header";
 import { Section } from "./section";
-
-const projects = [
-  {
-    title: "Cloud Migration Platform",
-    description:
-      "Automated multi-cloud migration tool with zero-downtime deployment capabilities. Built with Terraform, Ansible, and custom Python orchestration.",
-    tags: ["AWS", "Terraform", "Python", "Docker"],
-    featured: true,
-  },
-  {
-    title: "Kubernetes Cluster Manager",
-    description:
-      "Self-healing K8s infrastructure with auto-scaling, monitoring, and GitOps workflows for enterprise deployments.",
-    tags: ["Kubernetes", "Helm", "ArgoCD", "Prometheus"],
-    featured: true,
-  },
-  {
-    title: "Infrastructure as Code Framework",
-    description:
-      "Modular IaC framework supporting AWS, Azure, and GCP with unified configuration language and state management.",
-    tags: ["Terraform", "Pulumi", "Go", "TypeScript"],
-    featured: false,
-  },
-  {
-    title: "Security Compliance Scanner",
-    description:
-      "Automated cloud security posture management tool scanning for misconfigurations and compliance violations.",
-    tags: ["Python", "AWS Security Hub", "Azure Sentinel"],
-    featured: false,
-  },
-];
+import { data } from "@/lib/data";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   tags: string[];
   featured: boolean;
+  github?: string;
+  website?: string;
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({
@@ -47,6 +19,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
   description,
   tags,
   featured,
+  github,
+  website,
 }) => (
   <div
     className={`brutal-box brutal-box-hover p-6 ${featured ? "md:col-span-2" : ""}`}
@@ -54,12 +28,21 @@ const ProjectCard: FC<ProjectCardProps> = ({
     <div className="flex items-start justify-between mb-4">
       <h3 className="font-sans font-bold text-xl text-foreground">{title}</h3>
       <div className="flex gap-2">
-        <Button variant="ghost" size="icon" className="h-8 w-8">
-          <Github className="w-4 h-4" />
-        </Button>
-        <Button variant="ghost" size="icon" className="h-8 w-8">
-          <ExternalLink className="w-4 h-4" />
-        </Button>
+        {github && (
+          <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
+            <Link href={github} target="_blank">
+              <Github className="w-4 h-4" />
+            </Link>
+          </Button>
+        )}
+
+        {website && (
+          <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
+            <Link href={website} target="_blank">
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+          </Button>
+        )}
       </div>
     </div>
     <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
@@ -82,9 +65,24 @@ export const ProjectsSection: FC = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-secondary/30 relative">
       <div className="absolute inset-0 grid-pattern opacity-50" />
-      <Section className="relative" title="PROJECTS" index="03">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {projects.map((project) => (
+      <Section className="relative" title="PROJECTS" index="02">
+        {data.github && (
+          <div className="flex items-center gap-2 mb-8 text-muted-foreground font-mono text-sm">
+            <Link
+              href={data.github}
+              target="_blank"
+              className="brutal-box-hover p-3 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Github className="w-5 h-5" />
+            </Link>
+
+            <span>~/github $ view_all_my_projects</span>
+            <span className="terminal-cursor">_</span>
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t-2 border-primary/30">
+          {data.projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>

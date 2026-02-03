@@ -3,6 +3,7 @@
 import { Cloud, Menu, X } from "lucide-react";
 import { type FC, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { data } from "@/lib/data";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -18,12 +19,12 @@ export const Navbar: FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b-[3px] border-primary">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="#about" className="flex items-center gap-2 group">
             <div className="brutal-box p-2 group-hover:shadow-brutal-lg transition-shadow">
               <Cloud className="w-5 h-5 text-primary" />
             </div>
             <span className="font-bold font-mono text-sm uppercase tracking-wider hidden sm:block">
-              Cloud.Dev
+              {data.websiteName}
             </span>
           </a>
 

@@ -1,6 +1,8 @@
 import { Cloud, Server, Database, ArrowDown, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { type FC } from "react";
+import { data } from "@/lib/data";
+import Link from "next/link";
 
 export const HeroSection: FC = () => {
   return (
@@ -38,31 +40,29 @@ export const HeroSection: FC = () => {
         </div>
 
         <h1 className="brutal-heading text-5xl md:text-7xl lg:text-8xl mb-4">
-          <span className="text-foreground">MARCO</span>
+          <span className="text-foreground">{data.firstName}</span>
           <br />
-          <span className="text-gradient-primary brutal-text-glow">ROSSI</span>
+          <span className="text-gradient-primary brutal-text-glow">
+            {data.lastName}
+          </span>
         </h1>
 
         <div className="brutal-box inline-block px-6 py-3 mb-8">
           <p className="font-mono text-lg md:text-xl uppercase tracking-widest text-primary">
-            Cloud Engineer & DevOps Architect
+            {data.jobTitle}
           </p>
         </div>
 
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-          Progetto e costruisco infrastrutture cloud scalabili, automatizzate e
-          sicure. 5+ anni di esperienza con{" "}
-          <span className="text-accent">AWS</span>,{" "}
-          <span className="text-accent">Kubernetes</span>, e{" "}
-          <span className="text-accent">Terraform</span>.
+          {data.summary}
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <Button variant="default" size="lg">
-            Vedi Progetti
+          <Button variant="default" size="lg" asChild>
+            <Link href="#projects">Check my work</Link>
           </Button>
-          <Button variant="outline" size="lg">
-            Contattami
+          <Button variant="outline" size="lg" asChild>
+            <Link href="#contact">Contacts</Link>
           </Button>
         </div>
       </div>
