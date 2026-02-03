@@ -7,6 +7,8 @@ import {
   GitBranch,
 } from "lucide-react";
 import { type FC } from "react";
+import { SectionHeader } from "./section-header";
+import { Section } from "./section";
 
 const skills = [
   { icon: Cloud, name: "AWS", level: 95 },
@@ -47,20 +49,13 @@ const SkillBar = ({
 export const SkillsSection: FC = () => {
   return (
     <section id="skills" className="py-20 px-6 relative">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <span className="text-accent font-mono text-sm">{"// 02"}</span>
-          <h2 className="brutal-heading text-4xl md:text-5xl mt-2 brutal-text-glow text-primary">
-            SKILLS & STACK
-          </h2>
-        </div>
-
+      <Section title="SKILLS" index="02">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((skill) => (
             <SkillBar key={skill.name} {...skill} />
           ))}
         </div>
-      </div>
+      </Section>
     </section>
   );
 };

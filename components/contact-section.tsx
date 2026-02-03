@@ -2,18 +2,12 @@ import { Mail, Github, Linkedin, Twitter, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { type FC } from "react";
 import Link from "next/link";
+import { Section } from "./section";
 
 export const ContactSection: FC = () => {
   return (
     <section id="contact" className="py-20 px-6 relative">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-12">
-          <span className="text-accent font-mono text-sm">{"// 04"}</span>
-          <h2 className="brutal-heading text-4xl md:text-5xl mt-2 brutal-text-glow text-primary">
-            GET IN TOUCH
-          </h2>
-        </div>
-
+      <Section title="GET IN TOUCH" index="04">
         <div className="brutal-box p-8 md:p-12">
           <div className="flex items-center gap-2 mb-6 text-muted-foreground font-mono text-sm">
             <Terminal className="w-4 h-4 text-accent" />
@@ -67,7 +61,7 @@ export const ContactSection: FC = () => {
             © 2026 — All rights reserved
           </p>
         </footer>
-      </div>
+      </Section>
     </section>
   );
 };

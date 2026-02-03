@@ -1,6 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { type FC } from "react";
+import { SectionHeader } from "./section-header";
+import { Section } from "./section";
 
 const projects = [
   {
@@ -80,20 +82,13 @@ export const ProjectsSection: FC = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-secondary/30 relative">
       <div className="absolute inset-0 grid-pattern opacity-50" />
-      <div className="max-w-6xl mx-auto relative">
-        <div className="mb-12">
-          <span className="text-accent font-mono text-sm">{"// 03"}</span>
-          <h2 className="brutal-heading text-4xl md:text-5xl mt-2 brutal-text-glow text-primary">
-            PROJECTS
-          </h2>
-        </div>
-
+      <Section className="relative" title="PROJECTS" index="03">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
-      </div>
+      </Section>
     </section>
   );
 };
