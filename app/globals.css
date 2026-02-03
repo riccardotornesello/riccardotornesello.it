@@ -48,11 +48,25 @@
 }
 
 @theme {
+  /* Shadows */
   --shadow-brutal: var(--brutal-shadow);
   --shadow-brutal-lg: var(--brutal-shadow-lg);
   --shadow-brutal-accent: var(--brutal-shadow-accent);
   --shadow-glow: var(--glow-primary);
   --shadow-glow-accent: var(--glow-accent);
+
+  /* Animations */
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 :root {
@@ -104,8 +118,9 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground font-mono;
   }
@@ -121,13 +136,6 @@
 }
 
 @layer components {
-  .grid-pattern {
-    background-image:
-      linear-gradient(hsl(217 91% 60% / 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(217 91% 60% / 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
   .brutal-box {
     @apply bg-card border-[3px] border-primary;
     box-shadow: var(--brutal-shadow);
@@ -169,6 +177,13 @@
     100% {
       opacity: 0;
     }
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(hsl(217 91% 60% / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(217 91% 60% / 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 
   .scanline {

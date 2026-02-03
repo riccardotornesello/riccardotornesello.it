@@ -65,11 +65,11 @@ export const HeroSection: FC = () => {
             Contattami
           </Button>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-primary" />
-        </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <ArrowDown className="w-6 h-6 text-primary" />
       </div>
     </section>
   );
